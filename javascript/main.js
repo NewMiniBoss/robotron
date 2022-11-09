@@ -1,19 +1,16 @@
-const braco = document.querySelector('[data-braco="valor"]');
-const somar = document.querySelector('[data-braco="somar"]');
-const subtrair = document.querySelector('[data-braco="subtrair"]');
+const controle = document.querySelectorAll('.controle-ajuste');
+controle.forEach((elemento) => {
+    elemento.addEventListener('click', (evento) => {
+        manipulacao(evento.target.textContent, evento.target.parentNode);
+    })
+})
 
-somar.addEventListener('click', () => {
-    manipulacao("somar");
-});
+function manipulacao(operacao, controle) {
+    const peca = controle.querySelector('.controle-contador');
 
-subtrair.addEventListener('click', () => {
-    manipulacao("subtrair");
-});
-
-function manipulacao(operacao) {
-    if (operacao === "subtrair") {
-        braco.value = parseInt(braco.value) - 1;
+    if (operacao === "-") {
+        peca.value = parseInt(peca.value) - 1;
     } else {
-        braco.value = parseInt(braco.value) + 1;
+        peca.value = parseInt(peca.value) + 1;
     }
 }

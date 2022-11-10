@@ -95,12 +95,8 @@
 </head>
 
 <body>
-    <div fechar>
-        <button data-botao="fechar">Fechar Estoque</button>
-    </div>
-    <div abrir >
-        <button data-botao="abrir">Abrir Estoque</button>
-    </div>
+    <button data-botao="fechar">Fechar Estoque</button>
+    <button hidden data-botao="abrir">Abrir Estoque</button>
 
     <ul class="lista" data-lista>
         <li data-cores="laranja" class="item">Tinta laranja</li>
@@ -113,21 +109,28 @@
     <a href="https://alura.com.br/" target="_blank"><img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo"></a>
 
     <script>
+        const botoes = document.querySelectorAll('[data-botao]');
         const lista = document.querySelector('[data-lista]');
-        const abrir = document.querySelector('[abrir]')
-        const fechar = document.querySelector('[fechar]')
-
-        document.querySelector('[data-botao="abrir"]').addEventListener('click', () => {
-            lista.hidden = false
-            abrir.hidden = true;
-            fechar.hidden = false
-        })
-        document.querySelector('[data-botao="fechar"]').addEventListener('click', () => {
-            lista.hidden = true
-            abrir.hidden = false;
-            fechar.hidden = true;
+        const btnAbrir = document.querySelector('[data-botao="abrir"]');
+        const btnFechar = document.querySelector('[data-botao="fechar"]');
+        
+        botoes.forEach(elemento => {
+            elemento.addEventListener('click', (evento) => {
+                visibilidade(evento.target.dataset.botao, lista);
+            })
         })
 
+        function visibilidade(operacao, elementoLista) {
+            if (operacao == "fechar") {
+                elementoLista.hidden = "false";
+                btnAbrir.hidden = "";
+                btnFechar.hidden = "false";
+            } else {
+                elementoLista.hidden = "";
+                btnAbrir.hidden = "false";
+                btnFechar.hidden = "";
+            }
+        }
     </script>
 </body>
 

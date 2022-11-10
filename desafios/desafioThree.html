@@ -106,14 +106,13 @@
         <li data-cores="rosa" class="item">Tinta rosa</li>
         <li data-cores="preto" class="item">Tinta preta</li>
     </ul>
-    <a href="https://alura.com.br/" target="_blank"><img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo"></a>
+    <a href="https://alura.com.br/" target="_blank"><img src="https://www.alura.com.br/assets/img/home/alura-logo.svg"
+            alt="" class="alura-logo"></a>
 
     <script>
         const botoes = document.querySelectorAll('[data-botao]');
         const lista = document.querySelector('[data-lista]');
-        const btnAbrir = document.querySelector('[data-botao="abrir"]');
-        const btnFechar = document.querySelector('[data-botao="fechar"]');
-        
+
         botoes.forEach(elemento => {
             elemento.addEventListener('click', (evento) => {
                 visibilidade(evento.target.dataset.botao, lista);
@@ -121,6 +120,9 @@
         })
 
         function visibilidade(operacao, elementoLista) {
+            const btnAbrir = document.querySelector('[data-botao="abrir"]');
+            const btnFechar = document.querySelector('[data-botao="fechar"]');
+
             if (operacao == "fechar") {
                 elementoLista.hidden = "false";
                 btnAbrir.hidden = "";

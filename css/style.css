@@ -37,6 +37,29 @@ main {
     position: relative;
 }
 
+.robotron input {
+    cursor: pointer;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 24px;
+    z-index: 1;
+    position: absolute;
+    left: 45%;
+    top: 100%;
+    width: 150px;
+    height: 50px;
+    transition: all .2s;
+}
+
+.robotron input:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
 .robo {
     height: 110%;
     z-index: 1;
@@ -55,11 +78,11 @@ main {
     line-height: 0.8;
     writing-mode: vertical-rl;
     text-orientation: mixed;
-    color: rgba(255,255,255,0.8)
+    color: rgba(255, 255, 255, 0.8)
 }
 
 .box {
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.6);
     clip-path: polygon(calc(100% - 30px) 0, 100% 30px, 100% calc(100% - 30px), calc(100% - 30px) 100%, 30px 100%, 0 calc(100% - 30px), 0 30px, 30px 0);
     border-left: 5px solid var(--main-cinza);
     height: 80%;
@@ -72,7 +95,7 @@ main {
 }
 
 .montador {
-    height: 100%;;
+    height: 630px;
 }
 
 .montador-conteudo {
@@ -210,9 +233,10 @@ main {
 }
 
 @media screen and (max-width: 1600px) {
-    body { 
+    body {
         font-size: 14px;
     }
+
     main {
         width: 90vw;
         height: 80vh;
@@ -221,7 +245,7 @@ main {
 }
 
 @media screen and (max-width: 1200px) {
-    body { 
+    body {
         font-size: 13px;
     }
 

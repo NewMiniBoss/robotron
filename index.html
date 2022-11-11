@@ -17,9 +17,18 @@
 <body>
     <main>
         <section class="robotron">
-            <img class="robo" src="img/robotron vermelho.png" alt="Robotron" data-robo="tron">
+            <img class="robo" src="img/robo-azul.png" alt="Robotron" data-robo="tron">
             <figcaption class="titulo">ROBOTRON <br>2000</figcaption>
-            <input type="button" value="Trocar Cor">
+            <input type="submit" value="Trocar Cor" data-trocaCor>
+
+            <div data-listaCores hidden>
+                <button data-cores="azul">Azul</button>
+                <button data-cores="amarelo">Amarelo</button>
+                <button data-cores="branco">Branco</button>
+                <button data-cores="preto">Preto</button>
+                <button data-cores="rosa">Rosa</button>
+                <button data-cores="vermelho">Vermelho</button>
+            </div>
         </section>
 
         <section class="box estatisticas">
@@ -56,7 +65,8 @@
                         <label for="" class="peca-titulo">Braços</label>
                         <div class="controle">
                             <buttom class="controle-ajuste" data-controle="-" data-pecas="bracos">-</buttom>
-                            <input data-valor="braco" type="text" class="controle-contador" value="0" data-contador="valor">
+                            <input data-valor="braco" type="text" class="controle-contador" value="0"
+                                data-contador="valor">
                             <buttom class="controle-ajuste" data-controle="+" data-pecas="bracos">+</buttom>
                         </div>
                     </div>

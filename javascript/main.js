@@ -51,8 +51,26 @@ function manipulacao(operacao, controle) {
 }
 
 function atualizaEstatistica(peca) {
-
     estatisticas.forEach((elemento) => {
-        elemento.textContent = parseInt(elemento.textContent) + pecas[peca] [elemento.dataset.estatistica]
+        elemento.textContent = parseInt(elemento.textContent) + pecas[peca][elemento.dataset.estatistica]
     })
 }
+
+const abrirCores = document.querySelector('[data-trocaCor]');
+const listaDeCores = document.querySelector('[data-listaCores]');
+const cores = document.querySelectorAll('[data-cores]');
+const robotron = document.querySelector('[data-robo]');
+
+abrirCores.addEventListener('click', () => {
+    listaDeCores.hidden = "";
+    abrirCores.hidden = "true";
+})
+
+cores.forEach((elemento) => {
+    elemento.addEventListener('click', (corDoRobo) => {
+       robotron.src=`img/robo-${corDoRobo.target.dataset.cores}.png`;
+       abrirCores.hidden = "";
+       listaDeCores.hidden = "true";
+    })
+})
+

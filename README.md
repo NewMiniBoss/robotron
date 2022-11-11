@@ -10,7 +10,7 @@
 - explorando e criando funções no `JavaScript`
 
 ## Preview 🎥
-
+![robo](https://user-images.githubusercontent.com/80296330/201420588-ac1232be-e2a0-4c34-92a4-394ec4b40020.png)
 
 ## Acessar o projeto e rodar 📁
 
@@ -21,7 +21,7 @@ https://github.com/NewMiniBoss/bombo-music/archive/refs/heads/main.zip
 ```
 
 ## Funcionalidade do projeto ⚙
-- `botões`: ao clicar você ativa o som do instrumento
+- `botões`: ao clicar, atribuirá atributos para o robo e mudará seu status
 
 ## Tecnologias usadas no projeto 🚀
 - HTML

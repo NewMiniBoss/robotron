@@ -1,5 +1,5 @@
 ## Robotron
-
+É um robôs que foi feito para salvar o planeta Terra de uma invasão alienígena. 
 
 ## Conhecimentos adquiridos 📚
 - entendendendo a interação do `JavaScript` com HTML e CSS
